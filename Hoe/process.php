@@ -10,7 +10,7 @@
         if(empty($UserName) || empty($Email) || empty($Number) || empty($Msg))
 
         {
-            header('location:index.php?error');
+            header('location:deploy.php?error');
         }
         else
         {
@@ -18,13 +18,13 @@
 
             if(mail($to,$Number,$Msg,$Email))
             {
-                header("location:index.php?success");
+                header("location:deploy.php?success");
             }
         }
     }     
     else
     {
-        header("location:index.php");
+        header("location:deploy.php");
     }
 
 ?>
